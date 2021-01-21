@@ -1,0 +1,1 @@
+web: flask rb upgrade; flask translate compile; gunicorn microblog.app

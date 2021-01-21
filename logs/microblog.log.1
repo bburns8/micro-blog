@@ -1,0 +1,99 @@
+2021-01-19 14:52:48,069 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
+    db = SQLAlchemy('db')
+NameError: name 'SQLAlchemy' is not defined
+2021-01-19 14:53:12,442 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
+2021-01-19 14:53:15,319 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
+    db = SQLAlchemy('db')
+NameError: name 'SQLAlchemy' is not defined
+2021-01-19 14:54:47,048 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
+2021-01-19 14:54:49,045 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 19, in login
+    db = SQLAlchemy('db')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 722, in __init__
+    self.init_app(app)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 809, in init_app
+    'SQLALCHEMY_DATABASE_URI' not in app.config and
+AttributeError: 'str' object has no attribute 'config'
+2021-01-19 15:00:36,779 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 19, in login
+    db = SQLAlchemy('db')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 722, in __init__
+    self.init_app(app)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 809, in init_app
+    'SQLALCHEMY_DATABASE_URI' not in app.config and
+AttributeError: 'str' object has no attribute 'config'
+2021-01-19 15:00:38,230 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 19, in login
+    db = SQLAlchemy('db')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 722, in __init__
+    self.init_app(app)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 809, in init_app
+    'SQLALCHEMY_DATABASE_URI' not in app.config and
+AttributeError: 'str' object has no attribute 'config'
