@@ -1,103 +1,106 @@
-2021-01-19 14:37:08,858 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-01-27 10:31:35,154 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    mysql = connectToMySQL("mydb")
-NameError: name 'connectToMySQL' is not defined
-2021-01-19 14:37:09,514 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 34, in index
+    encrypted_body = encrypt(form.post.data)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 18, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 144, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-27 10:33:05,164 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 10:41:16,242 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 10:42:13,016 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    mysql = connectToMySQL("mydb")
-NameError: name 'connectToMySQL' is not defined
-2021-01-19 14:37:10,088 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 18, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 144, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-27 10:44:44,188 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:02:39,996 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:02:46,270 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    mysql = connectToMySQL("mydb")
-NameError: name 'connectToMySQL' is not defined
-2021-01-19 14:37:39,376 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 34, in index
+    encrypted_body = encrypt(form.post.data)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 18, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 144, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-27 11:17:43,351 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:17:56,889 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    mysql = connectToMySQL("mydb")
-NameError: name 'connectToMySQL' is not defined
-2021-01-19 14:40:22,126 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
-2021-01-19 14:40:23,997 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
-2021-01-19 14:40:25,451 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 19, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message))
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 144, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-27 11:18:12,604 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]

@@ -1,108 +1,121 @@
-2021-01-19 14:40:26,018 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-01-27 11:18:23,973 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
-2021-01-19 14:40:26,787 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 19, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 144, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-27 11:25:30,261 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:25:36,453 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
-2021-01-19 14:40:27,882 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 15, in encrypt
+    passphrase = trans(secret)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 11, in trans
+    return hashlib.md5(key.encode('utf-8')).digest()
+AttributeError: 'bytes' object has no attribute 'encode'
+2021-01-27 11:29:40,244 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:29:47,513 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
-2021-01-19 14:40:57,455 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
-2021-01-19 14:41:07,968 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
-2021-01-19 14:41:36,227 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
-2021-01-19 14:41:37,899 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 15, in encrypt
+    passphrase = trans(secret).decode('utf-8')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 11, in trans
+    return hashlib.md5(key.encode('utf-8')).digest()
+AttributeError: 'bytes' object has no attribute 'encode'
+2021-01-27 11:36:04,710 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:36:09,465 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
-2021-01-19 14:41:39,322 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 15, in encrypt
+    passphrase = trans(secret)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 11, in trans
+    return hashlib.md5(key.encode('utf-8')).digest()
+AttributeError: 'bytes' object has no attribute 'encode'
+2021-01-27 11:38:38,205 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:38:48,303 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
-2021-01-19 14:41:39,876 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 18, in login
-    db = SQLAlchemy()
-NameError: name 'SQLAlchemy' is not defined
-2021-01-19 14:42:10,730 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
-2021-01-19 14:45:34,566 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
-2021-01-19 14:52:44,981 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 15, in encrypt
+    passphrase = trans(secret)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 11, in trans
+    return hashlib.md5(key.encode('utf-8')).encode()
+AttributeError: 'bytes' object has no attribute 'encode'

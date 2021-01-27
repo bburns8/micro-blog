@@ -1,13 +1,4 @@
-2021-01-18 18:01:27,221 ERROR: Exception on /api/users/1 [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
-    self.dialect.do_execute(
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 609, in do_execute
-    cursor.execute(statement, parameters)
-sqlite3.OperationalError: no such column: user.token
-
-The above exception was the direct cause of the following exception:
-
+2021-01-26 16:45:25,644 ERROR: Exception on / [POST] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
   File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -21,43 +12,93 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/api/users.py", line 7, in get_user
-    return jsonify(User.query.get_or_404(id).to_dict())
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 422, in get_or_404
-    rv = self.get(ident)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 1018, in get
-    return self._get_impl(ident, loading.load_on_pk_identity)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 1135, in _get_impl
-    return db_load_fn(self, primary_key_identity)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/loading.py", line 286, in load_on_pk_identity
-    return q.one()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 3490, in one
-    ret = self.one_or_none()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 3459, in one_or_none
-    ret = list(self)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 3535, in __iter__
-    return self._execute_and_instances(context)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/orm/query.py", line 3560, in _execute_and_instances
-    result = conn.execute(querycontext.statement, self._params)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1011, in execute
-    return meth(self, multiparams, params)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/sql/elements.py", line 298, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1124, in _execute_clauseelement
-    ret = self._execute_context(
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1316, in _execute_context
-    self._handle_dbapi_exception(
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1510, in _handle_dbapi_exception
-    util.raise_(
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/util/compat.py", line 182, in raise_
-    raise exception
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/base.py", line 1276, in _execute_context
-    self.dialect.do_execute(
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/sqlalchemy/engine/default.py", line 609, in do_execute
-    cursor.execute(statement, parameters)
-sqlalchemy.exc.OperationalError: (sqlite3.OperationalError) no such column: user.token
-[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.token AS user_token, user.token_expiration AS user_token_expiration, user.last_message_read_time AS user_last_message_read_time 
-FROM user 
-WHERE user.id = ?]
-[parameters: (1,)]
-(Background on this error at: http://sqlalche.me/e/13/e3q8)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 34, in index
+    encrypted_body = encrypt(form.post.data)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 18, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 145, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-26 16:45:38,492 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-26 16:45:44,957 ERROR: Exception on / [POST] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 34, in index
+    encrypted_body = encrypt(form.post.data)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 18, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 145, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-26 16:46:08,586 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-26 16:46:13,880 ERROR: Exception on / [POST] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 34, in index
+    encrypted_body = encrypt(form.post.data)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 18, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 145, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-26 16:50:34,812 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-26 16:50:41,893 ERROR: Exception on / [POST] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 34, in index
+    encrypted_body = encrypt(form.post.data)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 18, in encrypt
+    return base64.b64encode(IV + aes.encrypt(message)).decode('utf-8')
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Cipher/_mode_cfb.py", line 174, in encrypt
+    c_uint8_ptr(plaintext),
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/Cryptodome/Util/_raw_api.py", line 144, in c_uint8_ptr
+    raise TypeError("Object type %s cannot be passed to C code" % type(data))
+TypeError: Object type <class 'str'> cannot be passed to C code
+2021-01-26 16:51:11,622 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]

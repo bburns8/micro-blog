@@ -1,91 +1,48 @@
-2021-01-19 15:01:27,868 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+2021-01-27 11:52:45,136 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 19, in login
-    db = SQLAlchemy('db')
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 722, in __init__
-    self.init_app(app)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 809, in init_app
-    'SQLALCHEMY_DATABASE_URI' not in app.config and
-AttributeError: 'str' object has no attribute 'config'
-2021-01-19 15:01:31,379 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 15, in encrypt
+    passphrase = trans(secret)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 11, in trans
+    return hashlib.md5(key.encode('utf-8')).digest()
+AttributeError: 'bytes' object has no attribute 'encode'
+2021-01-27 11:53:43,923 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]
+2021-01-27 11:53:49,321 ERROR: Exception on / [POST] [in /Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py:1891]
 Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
     reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
     raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 19, in login
-    db = SQLAlchemy('db')
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 722, in __init__
-    self.init_app(app)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 809, in init_app
-    'SQLALCHEMY_DATABASE_URI' not in app.config and
-AttributeError: 'str' object has no attribute 'config'
-2021-01-19 15:01:33,106 ERROR: Exception on /auth/login [GET] [in /Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/auth/routes.py", line 19, in login
-    db = SQLAlchemy('db')
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 722, in __init__
-    self.init_app(app)
-  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/venv/lib/python3.8/site-packages/flask_sqlalchemy/__init__.py", line 809, in init_app
-    'SQLALCHEMY_DATABASE_URI' not in app.config and
-AttributeError: 'str' object has no attribute 'config'
-2021-01-19 15:03:03,063 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:78]
-2021-01-19 17:13:57,886 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:77]
-2021-01-19 17:26:16,087 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:77]
-2021-01-19 18:07:53,132 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:77]
-2021-01-19 18:08:23,478 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:77]
-2021-01-19 18:08:30,453 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:77]
-2021-01-19 18:08:48,173 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:77]
-2021-01-19 18:12:01,414 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:92]
-2021-01-19 18:14:45,712 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:92]
-2021-01-19 18:15:51,539 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:92]
-2021-01-19 18:18:20,509 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:92]
-2021-01-19 18:24:42,678 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:92]
-2021-01-19 18:27:32,035 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:92]
-2021-01-19 18:33:13,426 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:92]
-2021-01-19 18:35:13,461 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 18:35:23,980 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 19:19:50,768 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 19:30:42,489 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 19:33:18,559 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 19:34:30,205 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 19:35:19,336 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 19:35:58,421 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 19:40:35,700 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 20:02:57,191 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 20:11:45,973 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-19 20:17:47,238 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-20 15:17:45,481 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:93]
-2021-01-20 16:22:06,601 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:94]
+  File "/Library/Frameworks/Python.framework/Versions/3.8/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/main/routes.py", line 35, in index
+    encrypted_body = encrypt(body_text)
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 15, in encrypt
+    passphrase = trans(secret).encode
+  File "/Users/blake/Desktop/Python-Resume-Projects/microblog/app/utilities/encrypting.py", line 11, in trans
+    return hashlib.md5(key.encode('utf-8')).digest()
+AttributeError: 'bytes' object has no attribute 'encode'
+2021-01-27 12:14:16,867 INFO: Microblog startup [in /Users/blake/Desktop/Python-Resume-Projects/microblog/app/__init__.py:95]

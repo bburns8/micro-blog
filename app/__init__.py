@@ -16,7 +16,7 @@ from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import hashes
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
-#New Encryption Mehtod
+#New Encryption
 password_provided = "password"  # This is input in the form of a string
 password = password_provided.encode()  # Convert to type bytes
 salt = b'W\x08\x16\xd2q\x1e?\xf2\xf8OqS\n\xae&s'  # CHANGE THIS - recommend using a key from os.urandom(16), must be of type bytes
@@ -28,7 +28,8 @@ kdf = PBKDF2HMAC(
     backend=default_backend()
 )
 key = base64.urlsafe_b64encode(kdf.derive(password))
-#End of new Encryption Method
+
+#End of new Encryption
 db = SQLAlchemy()
 migrate = Migrate()
 login = LoginManager()
